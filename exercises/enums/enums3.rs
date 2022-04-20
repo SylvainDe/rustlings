@@ -6,7 +6,6 @@ enum Message {
     Echo(String),
     ChangeColor((u8, u8, u8)),
     Quit,
-    // TODO: implement the message variant types based on their usage below
 }
 
 struct Point {
@@ -42,7 +41,7 @@ impl State {
             Message::Move(p) => self.position = p,
             Message::Echo(s) => self.echo(s),
             Message::ChangeColor(c) => self.color = c,
-            Message::Quit => self.quit=true,
+            Message::Quit => self.quit = true,
         }
     }
 }
